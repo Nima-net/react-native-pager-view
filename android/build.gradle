@@ -3,8 +3,9 @@ buildscript {
   def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['PagerView_kotlinVersion']
 
   repositories {
-    google()
-    jcenter()
+    maven { url "http://makhzanalhagh:8082/repository/test-I-group/"
+      allowInsecureProtocol = true 
+    }
   }
 
   dependencies {
